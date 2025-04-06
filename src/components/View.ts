@@ -21,16 +21,8 @@ declare global {
     }
 }
 
-type a = {
-    text?: string;
-} & {
-    text: string;
-};
-
 export interface Props {
     style?: React.CSSProperties;
-    onResponderGrant?: () => void;
-    onResponderRelease?: () => void;
     onMouseMove?: (event: MouseMoveEvent) => void;
     onMouseEnter?: () => void;
     onMouseLeave?: () => void;
@@ -39,16 +31,12 @@ export interface Props {
 export default (p: Props) => {
     const propTypes = {
         style: PropTypes.object,
-        onResponderGrant: PropTypes.func,
-        onResponderRelease: PropTypes.func,
         onMouseMove: PropTypes.func,
         onMouseEnter: PropTypes.func,
         onMouseLeave: PropTypes.func,
     };
     const defaultProps = {
         style: {},
-        onResponderGrant: () => {},
-        onResponderRelease: () => {},
         onMouseMove: (event: MouseMoveEvent) => {},
         onMouseEnter: () => {},
         onMouseLeave: () => {},
@@ -60,8 +48,6 @@ export default (p: Props) => {
     props = propChecker(props, propTypes, defaultProps, "View");
 
     const handlers = {
-        onResponderGrant: props.onResponderGrant,
-        onResponderRelease: props.onResponderRelease,
         onMouseMove: props.onMouseMove,
         onMouseEnter: props.onMouseEnter,
         onMouseLeave: props.onMouseLeave,
@@ -86,13 +72,7 @@ export default (p: Props) => {
     );
 
     const updateProps = propsUpdater(
-        [
-            handlers,
-            "onResponderGrant",
-            "onResponderRelease",
-            "onMouseEnter",
-            "onMouseLeave",
-        ],
+        [handlers, "onMouseEnter", "onMouseMove", "onMouseLeave"],
         {
             style: (style: React.CSSProperties) => {
                 element.getBaseElement().setStyle(style);
