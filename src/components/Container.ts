@@ -8,7 +8,7 @@ export const Container = (
     };
 
     const insertChild = (child: any, beforeChild: any) => {
-        const count = beforeChild.getElement().childCount();
+        const count = beforeChild.getBaseElement().childCount();
         const targetEle = beforeChild.element;
 
         for (let i = 0; i < count; i += 1) {

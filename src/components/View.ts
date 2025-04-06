@@ -69,13 +69,19 @@ export default (p: Props) => {
 
     const containerProps = Container(
         (child) => {
-            element.getElement().addChildView(child.element.getElement());
+            element
+                .getBaseElement()
+                .addChildView(child.element.getBaseElement());
         },
         (child) => {
-            element.getElement().removeChildView(child.element.getElement());
+            element
+                .getBaseElement()
+                .removeChildView(child.element.getBaseElement());
         },
         (child) => {
-            element.getElement().addChildView(child.element.getElement());
+            element
+                .getBaseElement()
+                .addChildView(child.element.getBaseElement());
         }
     );
 
@@ -89,7 +95,7 @@ export default (p: Props) => {
         ],
         {
             style: (style: React.CSSProperties) => {
-                element.getElement().setStyle(style);
+                element.getBaseElement().setStyle(style);
             },
         }
     );

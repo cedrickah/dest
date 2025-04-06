@@ -6,45 +6,41 @@ interface Size {
 }
 
 export abstract class BaseElement {
-    element: any;
+    baseElement: any;
 
-    getElement() {
-        return this.element;
+    getBaseElement() {
+        return this.baseElement;
     }
 }
 
 export class WindowElement extends BaseElement {
     constructor() {
         super();
-        this.element = gui.Window.create({});
+        this.baseElement = gui.Window.create({});
     }
 
     desktopSize(): Size {
-        return this.element.getContentSize();
-    }
-
-    getElement() {
-        return this.element;
+        return this.baseElement.getContentSize();
     }
 }
 
 export class ViewElement extends BaseElement {
     constructor() {
         super();
-        this.element = gui.Container.create();
+        this.baseElement = gui.Container.create();
     }
 }
 
 export class ButtonElement extends BaseElement {
     constructor() {
         super();
-        this.element = gui.Button.create({
+        this.baseElement = gui.Button.create({
             title: "",
             type: "normal",
         });
     }
 
     onClick(func: () => void) {
-        this.element["onClick"].connect(func);
+        this.baseElement["onClick"].connect(func);
     }
 }

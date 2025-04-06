@@ -58,10 +58,10 @@ export default (p: Props) => {
 
     const updateProps = propsUpdater([handlers, "onPress"], {
         style: (style: React.CSSProperties) => {
-            element.getElement().setStyle(style);
+            element.getBaseElement().setStyle(style);
         },
         title: (title: string) => {
-            element.getElement().setTitle(title);
+            element.getBaseElement().setTitle(title);
         },
     });
 
