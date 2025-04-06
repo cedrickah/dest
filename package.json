@@ -20,8 +20,9 @@
     "scripts": {
         "test": "jest --config jest.config.json",
         "example": "babel example/ --out-dir app && node app/index.js",
-        "pack": "rollup -c",
         "build": "tsc -p ./tsconfig.json --outDir build --declaration true && api-extractor run",
+        "pack": "rollup -c",
+        "build:pack": "tsc -p ./tsconfig.json --outDir build --declaration true && api-extractor run & rollup -c",
         "docs": "typedoc src --out docs",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
