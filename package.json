@@ -19,7 +19,6 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "test": "jest --config jest.config.json",
-        "dev": "rollup -c -w",
         "example": "babel example/ --out-dir app && node app/index.js",
         "pack": "rollup -c",
         "build": "tsc -p ./tsconfig.json --outDir build --declaration true && api-extractor run",
