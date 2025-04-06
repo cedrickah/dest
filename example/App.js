@@ -3,13 +3,6 @@ import React, { Component } from "react";
 import { View, Button } from "../build";
 
 class App extends Component {
-    state = {
-        test: "test",
-        a: true,
-        mouseState: "idle",
-        x: 50,
-        y: 50,
-    };
     render() {
         return (
             <View
