@@ -9,12 +9,29 @@ Currently in development mode.
 npm run build
 ```
 
-```
-npm run pack
-```
-
-## Run example
+## Run the example to test
 
 ```
 npm run example
 ```
+
+# To Do
+
+## Add components
+
+-   [x] Window
+-   [x] View
+-   [x] Text
+-   [x] Button
+-   [ ] TextInput
+-   [ ] Image
+-   [ ] Picker
+
+## Add external JavaScript library usage support
+
+## Add functionalities
+
+-   [ ] Notifications
+-   [ ] Sound
+
+## Add JavaScript-C/C++ API
