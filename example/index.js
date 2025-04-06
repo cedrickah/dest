@@ -1,9 +1,9 @@
 import React from "react";
-import { AppRegistry } from "../dist";
-import Example from "./App.js";
+import { AppRegistry } from "../build";
+import App from "./App.js";
 const gui = require("gui");
 
-AppRegistry.registerRootComponent(<Example />);
+AppRegistry.registerRootComponent(<App />);
 
 if (!process.versions.yode) {
     gui.MessageLoop.run();

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import { View, Button } from "../dist";
+import { View, Button } from "../build";
 
-class Example extends Component {
+class App extends Component {
     state = {
         test: "test",
         a: true,
@@ -27,4 +27,4 @@ class Example extends Component {
     }
 }
 
-export default Example;
+export default App;
