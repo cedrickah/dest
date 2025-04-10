@@ -1,22 +1,22 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { View, Button } from "../build";
 
-class App extends Component {
-    render() {
-        return (
-            <View
-                style={{
-                    height: "50%",
-                    width: "100%",
-                }}
-            >
-                <Button
-                    onPress={() => console.log("Hello world!")}
-                    title="Say hello"
-                />
-            </View>
-        );
-    }
+function App() {
+    const [count, setCount] = React.useState(0);
+
+    useEffect(() => {
+        console.log(count);
+    });
+    return (
+        <View
+            style={{
+                height: "50%",
+                width: "100%",
+            }}
+        >
+            <Button onPress={() => setCount(count + 1)} title="Increase" />
+        </View>
+    );
 }
 
 export default App;
