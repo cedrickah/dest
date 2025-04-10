@@ -4,9 +4,9 @@
     "description": "Create desktop applications using a React syntax, on all platforms.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/open-devans/dest"
+        "url": "https://github.com/cedrickah/dest"
     },
-    "author": "cedrick-ah",
+    "author": "cedrickah",
     "license": "MIT",
     "keywords": [
         "react",
