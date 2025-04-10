@@ -1,7 +1,7 @@
 import React from "react";
 import { AppRegistry } from "../build";
 import App from "./App.js";
-const gui = require("gui");
+import gui from "gui";
 
 AppRegistry.registerRootComponent(<App />);
 
