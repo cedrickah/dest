@@ -1,8 +1,7 @@
-import propChecker from "../utils/propChecker";
 import { Container } from "./Container";
 import * as PropTypes from "prop-types";
-import propsUpdater from "../utils/propsUpdater";
 import { ViewElement } from "../ui";
+import { propChecker, propsUpdater } from "../utils/props";
 
 interface Point {
     x: number;

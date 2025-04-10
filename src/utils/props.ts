@@ -1,4 +1,21 @@
-const propsUpdater =
+import PropTypes from "prop-types";
+
+export const propChecker = <P = any, T = any, D = any>(
+    props: P,
+    propTypes: T,
+    defaultProps: D,
+    name: string
+): any => {
+    for (let prop in defaultProps) {
+        if (!(prop in props) || typeof props[prop] === "undefined") {
+            props[prop] = defaultProps[prop];
+        }
+    }
+    PropTypes.checkPropTypes(propTypes, props, "prop", name);
+    return props;
+};
+
+export const propsUpdater =
     (...updateMaps: any[]) =>
     (changes: object) =>
         updateMaps.forEach((updateMap) => {
@@ -27,5 +44,3 @@ const propsUpdater =
                 }
             });
         });
-
-export default propsUpdater;
