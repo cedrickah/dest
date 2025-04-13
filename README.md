@@ -1,4 +1,4 @@
-# dest
+# Dest
 
 Create desktop applications using a React syntax, on all platforms.
 Currently in development mode.
