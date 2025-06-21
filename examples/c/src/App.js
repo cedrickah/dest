@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
-import { View, Button } from "../build";
+import { View, Button } from "../../../build";
+
+var date = require("bindings")("date");
 
 function App() {
     const [count, setCount] = React.useState(0);
 
-    useEffect(() => {
-        console.log(count);
-    });
+    const getDate = () => {
+        console.log("Today is: " + date.getdate());
+    }
     return (
         <View
             style={{
@@ -14,7 +16,7 @@ function App() {
                 width: "100%",
             }}
         >
-            <Button onPress={() => setCount(count + 1)} title="Increase" />
+            <Button onPress={getDate} title="Get Date" />
         </View>
     );
 }
