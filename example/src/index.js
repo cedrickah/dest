@@ -1,5 +1,5 @@
 import React from "react";
-import { AppRegistry, Loop } from "../build";
+import { AppRegistry, Loop } from "../../build/index.js";
 import App from "./App.js";
 
 AppRegistry.registerRootComponent(<App />);
