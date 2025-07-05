@@ -1,10 +1,9 @@
 {
-    "name": "hello-world-example",
+    "name": "networking-example",
     "version": "0.0.0",
     "main": "./index.js",
     "scripts": {
-        "start:node": "babel src/ --out-dir app && node app/index.js",
-        "start:yode": "babel src/ --out-dir app && yode app/index.js"
+        "start": "babel src/ --out-dir app && yode app/index.js"
     },
     "devDependencies": {
         "@babel/cli": "^7.25.7",

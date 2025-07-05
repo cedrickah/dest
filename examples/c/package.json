@@ -1,9 +1,10 @@
 {
-    "name": "example",
+    "name": "c-example",
     "version": "0.0.0",
     "main": "./index.js",
     "scripts": {
-        "start": "babel src/ --out-dir app && node app/index.js"
+        "start:node": "babel src/ --out-dir app && node app/index.js",
+        "start:yode": "babel src/ --out-dir app && yode app/index.js"
     },
     "dependencies": {
         "bindings": "~1.5.0"
